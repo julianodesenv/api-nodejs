@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
 
-let db = mongoose.connect('mongodb://localhost27017/dev_api_js', { useMongoClient:true })
+let db = mongoose.connect('mongodb://localhost:27017/dev_api_js', { useUnifiedTopology: true, useNewUrlParser: true })
 
 routes(app)
 
